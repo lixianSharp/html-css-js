@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+	函数的定义格式：
+		function 函数名(形参列表){
+			函数体;
+		}
+		
+	javascript的函数要注意的细节：
+		1、在javascript中函数定义形参时是不能使用var关键字声明变量的。
+		2、在Javascript中的函数是没有 返回值类型的，如果函数需要返回数据给调用者，直接返回即可，如果不需要返回则不返回。
+		3、在javascript中是没有函数 重载 的概念的，后定义的同名函数会直接覆盖前面定义的同名函数。
+		4、在javascript中的任何的函数内部都隐式的维护了一个arguments(数组)的对象，给函数传递数据的时候，是会先传递到arguments对象中，然后再由arguments对象分配数据给形参的。
+		5、建议还是要写上参数
+*/
+
+	//需求：定义一个函数做两个参数的加法功能  是没有返回值类型的，如果需要返回数据的话就直接返回即可
+	/*
+	function add(a,b){
+		var sum = a+b;
+		document.write("两个参数的总和："+sum);
+		return sum;//返回值
+	}
+	
+	//调用函数
+	var result = add(1,2);
+	document.write("结果是："+result);//结果是：3
+	*/
+	
+	document.write("<br/>");
+	
+	//javascript中函数是没有重载的，后定义的函数会覆盖前面的函数,此时，前面定义的add(a,b)函数就被覆盖了
+	function add(a,b,c){
+		document.write("长度："+arguments.length+"<br/>");
+		for(var index = 0;index<arguments.length;index++){
+			document.write(arguments[index]+" ");
+		}
+	}
+	
+	//函数调用
+	add(11,21,31);
+	//结果：长度：3
+	// 11 21 31 
+	
+	
+	//定义一个类
+	function Person(id,name){
+		this.id = arguments[0];
+		this.name = arguments[1];
+	}
+	//创建一个Person类的对象
+	var p = new Person(12,"sdf");
+	document.write(p.id+"--"+p.name);//12--sdf 
+	
+	
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>函数的定义</title>
+</head>
+
+<body>
+</body>
+</html>

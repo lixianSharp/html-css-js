@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+<script type="text/javascript">
+/*
+	通过html标签的属性找节点：
+		document.getElementById("html元素的id");
+		document.getElementsByTagName("标签名");
+		document.getElementsByName("html元素的name");
+*/
+	function showText(){
+		var inputNode=document.getElementById("userName");//根据id属性值找元素
+		inputNode.value = "设置好了文本";
+	}
+	
+	// innerHTML是用于设置标签体的内容的。value适用于设置标签的value的属性值的
+	function showImage(){
+		var images = document.getElementsByTagName("img");//根据标签名获取所有的标签对象
+		for(var i=0;i<images.length;i++){
+			images[i].src="33.jpg";
+			//要对哪个标签进行操作就要先找到那个标签，查看要进行操作的那个属性。
+			images[i].width="100";
+			images[i].height="100";
+		}
+	}
+	
+	function showDiv(){
+		var divs = document.getElementsByName("info");//根据标签的name属性值找到对应的标签，返回的是一个数组
+		for(var i = 0;i<divs.length;i++){
+			divs[i].innerHTML="哈哈".fontcolor("red");
+		
+		}
+	
+	}
+	
+</script>
+<body>
+			<input type="text"  id="userName" value="请输入用户名"/><input type="button" onclick="showText()" value="设置文本"/>
+			<hr/>
+			<img src=""/>
+			<img src=""/>
+			<img src=""/>
+			 <input type="button"  onclick="showImage()" value="显示图片"/>
+			 <hr/>
+			 <div name="info"></div>
+			 <div name="info"></div>
+			 <div name="info"></div>
+			 <input type="button" onclick="showDiv()" value="设置Div内容">
+			 	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+		当前系统时间：<span id="time"></span>
+</body>
+
+<script type="text/javascript">
+	//一个案例:显示当前系统的时间
+			function getCurrentTime(){
+				//先获取到当前的系统时间
+				var date=new Date();
+				//把当前系统时间拼装成我指定的格式。
+			    var timeInfo= "当前时间是："+date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日    "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+				  
+				  //找span对象
+				var spanObj=  document.getElementById("time");
+				//设置span标签题的内容
+				spanObj.innerHTML=timeInfo.fontcolor("red");
+			}
+		
+		//执行方法
+		//getCurrentTime();//如果只是这个的话只能显示当前刷新时的时间
+		
+		//定时方法
+		//window对象的 setInterval()按照指定的周期（以毫秒计）来调用函数或计算表达式
+		//window.setInterval("代码","每个指定的毫秒数");/*setInterval  定时方法：第一个参数要指定调用的代码   第二个参数是每隔指定的毫秒数调用指定的代码 
+		
+		window.setInterval(getCurrentTime,1000);
+	
+	
+	
+	
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index.html这是主页</title>
+	
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    	
+<!-- 
+框架标签：
+	frameset　：　一个frameSet可以把一个页面切割成多份。只能按照行或者列切割。
+		frame :一个frame就是一个页面  不能被切割。frame是位于frameset中
+		ifame :在一个网页中分隔一部分的位置显示另外一个网页的信息
+	注意：frameSet不能用于body标签体内容。
+
+ -->
+  </head>
+  	
+  	<frameset rows="20%,30%,30%,*"><!-- 把这个页面按行的比例分成四份 -->
+  		<frame src="top.html"/><!-- 第一份页面 -->
+  			<frameset cols="20%,*%"><!-- 第二份页面  该页面按照列的比例分成两份 -->
+  				<frame src="left.html"/>
+  				<frame name="center" src="center.html"/>
+  			</frameset>
+  		<frame src="foot.html"/><!-- 第三份页面 -->
+  			<frameset cols="20%,*%"><!-- 第四份页面 该页面按照列的比例分成两份-->
+  				<frame src="left.html"/>
+  				<frame name="center" src="center.html"/>
+  			</frameset>  			
+  	</frameset><noframes></noframes>
+
+</html>

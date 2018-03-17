@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+javascript中常用的事件：
+	鼠标点击相关：
+		onclick  在用户鼠标左键单击对象时触发
+		ondblclick  当用户双击对象时触发
+		onmousesown  当用户用任何鼠标按钮单击对象时触发
+		onmouseup  当用户在鼠标位于对象之上时释放鼠标按钮时触发
+		
+	鼠标移动相关：
+		onmouseout  当用户将鼠标指针移出对象边界时触发。
+		onmousemove 当用户将鼠标滑过对象时触发
+		
+	焦点相关的：
+		onblur 在对象失去输入焦点时触发
+		onfocus 当对象获得焦点时触发
+	
+	其他：
+		onchange 当对象或选中区的内容改变时触发。这个事件一般用于下拉框
+		onload  在浏览器完成对象的装载后立即触发
+		onsubmit  当表单将要被提交时触发
+		
+*/
+		function ready(){
+			alert("body的元素被加载完毕了")
+		}
+
+
+		function oclick(){
+			alert("左键单击");
+		}
+		
+		function dbclick(){
+			alert("双击");
+		}
+		
+		function mousedown(){
+			alert("任意单击");
+		}
+		
+		function mousemove(){
+			//先得到对应的a标签对象
+			var nodeA = document.getElementById("aa");
+			//改变该标签体中的内容
+			nodeA.innerHTML = "鼠标滑过对象边界触发";
+			
+		}
+		
+		function mouseout(){
+			//先得到对应的标签的对象 通过id得到
+			var nodeA2 = document.getElementById("aa2");
+			//改变标签题中的内容
+			nodeA2.innerHTML = "鼠标指针移出对象边界时触发";
+		}
+		
+		function mouseup(){
+			//先得到对应的标签的对象 通过id得到
+			var nodeA3 = document.getElementById("aa3");
+			//改变标签题中的内容
+			nodeA3.innerHTML = "鼠标位于对象之上并点击时触发";
+		}
+		
+		
+		function change(){
+			alert("城市改变了");	
+		}
+		
+		function showInfo(){
+			//将信息显示在span标签中，首先得获取到对应的span标签对象
+			var spanNode = document.getElementById("userName");
+			spanNode.innerHTML = "用户名是李贤元";
+			
+		}
+		
+		function hideInfo(){
+			//将信息显示在span标签中，首先得获取到对应的span标签对象
+			var spanNode1 = document.getElementById("userName");
+			spanNode1.innerHTML = "你看不到用户名了，哈哈";
+			
+		}		
+		
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body onload="ready()">
+	<input type="button" value="onclick左键单击" onclick="oclick()" />
+	<input type="button" value="dbclick双击" ondblclick="dbclick()"/>
+	<input type="button" value="任意单击" onmousedown="mousedown()"/>
+	
+	<a id="aa" onmousemove="mousemove()">onmousemove()方法</a>
+	<a id="aa2" onmouseout="mouseout()">onmouseout()方法</a>
+	<a id="aa3" onmouseup="mouseup()">onmouseup()方法</a>
+	<select onchange="change()">
+		<option>福州</option>
+		<option>厦门</option>
+		<option>闽西龙岩</option>
+	</select>
+	<br/>
+	
+	
+	查看用户名：<input type="text" onfocus="showInfo()" onblur="hideInfo()" /><span id="userName" ></span>
+	
+</body>
+</html>

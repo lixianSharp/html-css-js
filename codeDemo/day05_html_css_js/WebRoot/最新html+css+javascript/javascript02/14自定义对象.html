@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+	自定义对象：
+		在javascript中没有类的概念，只要有函数即可创建对象
+		
+		自定义对象的方式1：使用无参的函数创建对象
+		
+*/
+	//自定义对象的方式1：使用无参的函数创建对象
+	function Person(){
+		
+	}
+	
+	var p = new Person();//创建了一个Person对象
+	p.id=110;
+	p.name="狗娃";
+	//初始化该对象的方法
+	p.say = function(){
+		alert("这个人的名字叫："+this.name);
+	}
+	
+	var p2 = new Person();
+	document.write("编号："+p.id+"姓名："+p.name);
+	p.say();
+	
+	//方式2：使用带参的函数创建对象
+	function Person(id,name){
+		this.id=id;
+		this.name=name;
+		this.say=function(){
+			alert(name+"呵呵");
+		}
+	}
+	var p1 = new Person(112,"狗蛋");//创建对象
+	p1.say();
+	
+	
+	//方式3：使用Object函数创建对象
+	var p3 = new Object();
+	p.id = 114;
+	p.name = "铁蛋";
+	
+	//方式4：使用字面量的方式创建
+	var p4 = {
+		id:110,
+		name:"狗娃",
+		say:function(){
+			alert(this.name+"呵呵！！");
+		}
+	}
+	
+	p4.say();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>自定义对象</title>
+</head>
+
+<body>
+</body>
+</html>

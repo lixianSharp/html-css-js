@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+字符串转数字：
+	parseInt() 可以把一个字符串转换成整数
+	parseFloat() 可以把一个字符串转换成小数
+	
+*/
+	var c="12";
+	var d=parseInt(c);//把字符串转换成整数
+	document.write("结果"+(d+1)+"<br/>");//结果13
+	
+	var a="12.7";
+	var b=parseInt(a);
+	document.write(b+"<br/>");//12
+	/*
+	 注意：字符串转换成整数的时候，会把小数部分去掉，只留下整数部分。
+	*/
+	
+	var h="a12";
+	var i=parseInt(h);
+	document.write(i+"<br/>");//NaN  not a number （不是一个数字）
+	
+	var g="23abc123";
+	var j=parseInt(g);
+	document.write(j+"<br/>");//23	 
+	/*注意：
+	parseInt方法如果接收的字符串含有非数字的字符，那么parse方法会从字符串的首个字符开始寻找，一直找到非数字字符位置，然后就使用前面的数字字符转换成数字
+	*/
+	
+	 var k="3.14";
+	 var m=parseFloat(k);
+	 document.write(m+"<br/>");//3.14
+	 
+	 var p="10";//如果一个字符串是整数的，那么使用parseFloat还是转换成整数的。
+	 p=parseFloat(p);
+	 document.write("结果"+p+"<br/>");//结果10
+	 
+	 var r="012";
+	 r=parseInt(r);
+	 document.write(r+"<br/>");//12
+	 /*
+	 	如果首位是0，那么就先去除0，在进行转换
+	 */
+	 
+	 var s="0x10";
+	 s=parseInt(s);
+	 document.write(s+"<br/>");//16
+	/*
+		如果一个字符串是以0x开头，那么会把字符串中的内容当成16进制的数据进行处理的。
+	*/
+	
+	
+	/*
+		javascript提供一个isNaN的方法让我们判断该字符串是否是一个数字。
+		is not a number 不是一个数字
+		不是一个数字返回true，是一个数字返回false.
+	*/
+	document.write(isNaN("123")+"<br/>");//false  表示该字符串是一个数字
+	document.write(isNaN("abc")+"<br/>");//true 表示该字符串不是一个数字
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>字符串转换成数字</title>
+</head>
+
+<body>
+</body>
+</html>

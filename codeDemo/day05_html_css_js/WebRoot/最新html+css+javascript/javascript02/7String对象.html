@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+	创建一个字符串的方式：
+		方式1：
+			new String("字符串的内容");
+		方式2：
+			var str = "字符串的内容";
+		
+		字符串常用的方法：
+			anchor() 生产锚点,创建 HTML 锚。
+			blink() 显示闪动字符串。
+			charAt()  返回指定位置的字符，从0开始计数的
+			charCodeAt()  返回一个整数，返回在指定的位置的字符的 Unicode 编码。
+			concat()  连接字符串
+			fontcolor  使用指定的颜色来显示字符串。
+			indexOf() 返回某个指定的字符串值在字符串中首次出现的位置。
+			italics() 使用斜体显示字符串。
+			link("里面写入你要链接的网址")  将字符串显示为链接。
+			replace()  替换与正则表达式匹配的子串。
+			split() 把字符串分割为字符串数组。
+			substr(start,length) 从起始索引号提取字符串中指定数目的字符。
+			toUpperCase() 把字符串转换为大写。
+			toLowerCase() 把字符串转换为小写。
+			
+			
+*/
+
+		var txt = "helloworld!";
+		document.write(txt.anchor("myanchor"));//等价于<a name="myanchor">helloworld</a>
+		
+		document.write("第五章".blink()+"<br/>");
+		document.write("abc".charAt(1)+"<br/>");//b
+		document.write("abc".charCodeAt(1)+"<br/>");//98  cahrCodeAt返回的是索引值对应的字符的ASCII码值，也就是指定索引对应的字符的ASCII码值
+		document.write("第六章".fontcolor("red")+"<br/>");//fontcolor() 给字符串添加font标签，然后设置属性值
+		document.write("abchellohehehhello".indexOf("hello")+"<br/>");// 3 //返回指定字符串第一次出现的索引值
+		document.write("第五章".italics()+"<br/>");//给文本添加一个i标签把文本内容设置成斜体
+		document.write("传智播客".link("http://www.itcast.cn")+"<br/>");//给文本添加一个a标签
+		document.write("明天我们讲xml".replace("xml","DOM编程")+"<br/>");
+		
+		var str="我们-大家-好";
+		var arr=str.split("-");
+		for(var index =0;index<arr.length;index++){
+				document.write(arr[index]+",");
+		}
+		document.write("<br/>");
+		
+		document.write("abc".toUpperCase()+"<br/>");//转大写
+		document.write("ABC".toLowerCase()+"<br/>");//转小写
+		
+		
+		
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>String对象</title>
+</head>
+
+<body>
+	
+</body>
+</html>

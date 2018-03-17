@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style type="text/css">
+	.outer{
+		border-style:solid;
+		width:370px;
+		height:200px;
+		/*外边距*/
+		margin-top:250px;
+		margin-left:420px;
+		background-image:url(QQ.jpg);
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	
+	.userName{
+		margin-top:60px;
+		margin-left:80px;	
+	}
+	
+	.password{
+		margin-left:80px;
+		margin-top:20px;
+	}
+	
+	input{
+		border-color:#FF0000;
+		border-width:3px;	
+	}
+	
+	#button{
+		margin-left:120px;	
+	}
+	
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>盒子模型作业</title>
+</head>
+
+<body>
+	<div class="outer">
+		<div class="userName">
+		用户名：<input type="text" name="name"/>
+		</div><br/>
+		
+		<div class="password">
+		密码：&nbsp;&nbsp;<input type="password" name="password"/>
+		</div><br/>
+		<input id="button" type="submit" value="登陆"/>
+	</div>
+</body>
+</html>

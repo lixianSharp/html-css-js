@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style type="text/css">
+/*
+选择器：选择器的作用就是找到对应的数据进行样式化。
+	
+	1、标签选择器：
+		就是找到所有指定的标签进行样式化。
+			格式：
+				标签名{
+					样式1；
+					样式2；....
+				}
+			例子：
+				div{
+					color:#00FFFF;
+					font-size:24px;	
+				}	
+	2、类选择器(也叫class类选择器)：
+		使用类选择器首先要给html标签指定对应的class属性值。
+			格式：
+				.class的属性值{
+					样式1；
+					样式2；
+				}
+		类选择器一定要注意的事项：
+			1、html元素的class属性值一定不能以数字开头。
+			2、类选择器的样式是要优先于标签选择器的样式。
+	 例子：
+    	.test{
+			color:#0066FF;
+			background-color:#999999;
+		  }
+		.two{
+	 		color:#999999;
+	 		background-color:#FF00FF;
+	 	}
+		
+	3、ID选择器：
+		使用ID选择器首先要给html元素添加一个id的属性值。
+			ID选择器的格式：
+				#id属性值{
+					样式1;
+					样式2; ...
+				}
+		id选择器要注意的事项：
+			1、ID选择器的样式优先级是最高的，优先于类选择器和标签选择器。
+			2、ID的属性值也是不能以数字开头的。
+			3、ID的属性值在一个html页面中只能出现一次。
+	例子：
+		#one{
+			font-size:xx-large;
+			background-color:#999999;
+			color:#00FFFF;
+		}
+	
+	4、交集选择器：就是对选择器1中的选择器2里面的数据进行样式化。
+		格式：
+			选择器1 选择器2{
+				样式1;
+				样式2;....
+			}
+		例子：
+		<!--对第一个div标签中的span标签里面的数据进行样式化-->
+		div span{
+			background-color:#000099;
+			font-size:24px;	
+		}
+	
+		.test span{
+			background-color:#000099;
+			font-size:24px;	
+		}
+	
+	
+	5、并集选择器:对指定的选择器进行统一的样式化。
+		格式：
+			选择器1,选择器2,...{
+				样式1;
+				样式2;
+				样式3;....
+			}
+			
+       例子：
+			span,a{
+				border-style:solid;
+				border-color:#0066FF;
+				font-style:italic;
+			}
+			
+			
+	6、通用选择器：
+		格式：
+			*{
+				样式1;
+				样式2;
+				样式3;....
+			}
+	 例子：
+		*{
+			text-decoration:line-through;
+			background-color:#0066FF;
+		}
+*/
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>选择器</title>
+</head>
+
+<body>
+	<div id="one" class="test"><span clss="three">这个是第一个第一个div标签</span></div>
+		<div id="one" >这是<span class="two">第二个div标签</span></div><!--这个说明ID选择器的优先级是最高的-->
+	<span>这是一个p段落标签</span><br/>
+	
+	<a class="two" href="#">新闻标题</a>
+	
+</body>
+</html>

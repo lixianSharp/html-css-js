@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+	日期对象；Date对象   具体用法参考文档w3cSchool
+		
+*/
+	//获取当前的系统时间
+	var date = new Date();
+	document.write("年:"+date.getFullYear()+"<br/>");
+	document.write("月:"+(date.getMonth()+1)+"<br/>");//从 Date 对象返回月份 (0 ~ 11)。 所以获取月份的时候，需要加上1，才是我们当前的月份
+	document.write("日:"+date.getDate()+"<br/>");
+	
+	document.write("时:"+date.getHours()+"<br/>");
+	document.write("分:"+date.getMinutes()+"<br/>");
+	document.write("秒:"+date.getSeconds()+"<br/>");
+	document.write("毫秒:"+date.getMilliseconds()+"<br/>");
+	document.write("返回 1970年 1 月 1 日至今的毫秒数:"+date.getTime()+"<br/>");
+	
+	
+	document.write("---------------"+"<br/>");
+	
+	
+
+	
+	
+	
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Date对象</title>
+</head>
+
+<body>
+	当前系统时间：<span id="time"></span>
+</body>
+</html>

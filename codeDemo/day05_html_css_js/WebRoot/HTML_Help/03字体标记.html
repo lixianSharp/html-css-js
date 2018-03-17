@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>字体标记.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <!--
+        <strong></strong> 加粗标签
+        <b></b> 加粗标签
+         ：两个标签都能产生字体加粗的效果
+            但必须注意的是当文件被设为 gb2312 Encoding 时，两者所 标示的中文字不会于 Netscape Netvigator 显示粗体效果
+
+    -->
+    Creation of Webpage
+    <br>
+    <strong>Creation of Webpage</strong>
+    <br>
+    <b>Creation of Webpage</b> 
+	
+<!-- 
+	<i></i>
+	<em></em>
+	<var></var>
+	<cite></cite>
+	<dfn></dfn>
+	<address></address>
+	这些标记于 Internet Explorer 都产生斜体效果，
+	而只有 </DFN> 于 Netscape Netvigator 失去作 用。
+	这些标记中只有 <ADDRESS> 较为特别，因它包括换行效果所以不必在它前面加上 <BR> 标记。
+	
+	 -->
+	<i>Creation of Webpage</i><br/>
+	<em>Creation of Webpage</em><br/>
+	<var>Creation of Webpage</var><br/>
+	<cite>Creation of Webpage</cite><br/>
+	<dfn>Creation of Webpage</dfn><br/>
+	<address>Creation of Webpage</address><!-- 这个斜体标签包括换行效果 -->
+	我就不是斜体！
+	
+	<!-- 注意：HTML的标签是不区分大小写的哦 ！！
+	<tt></tt>标签定义打字机文本
+	<samp></samp>定义样本文本。
+	 <code></code>定义计算机代码文本。
+	 <kdb></kdb>定义键盘文本。它表示文本是从键盘上键入的。
+	 上面四个标签可以令每字母有相等宽度且每字母之间的距离稍微加宽。但于NC不见得如此。
+	 <u></u> 加底线的标签。
+	 <strike></strike> 加上删除线的标签。 
+	 <big></big> 令字体加大。 
+	 <small></small>  令字体变细。 
+	 <sup></sup>定义上标文本。
+	 <sub></sub>定义下标文本
+	
+	
+	-->
+	<tt>标签定义打字机文本</tt><br/>
+	<samp>定义样本文本。</samp><br/>
+	 
+	 <code>
+		public staitc void m(){
+	 	System.out.println("hello");
+		}	 	
+	 </code><br/>
+	 <kdb>定义键盘文本</kdb><br/>
+	 <u>加底线的标签。</u> <br/>
+	 <strike>加上删除线的标签。 </strike> <br/>
+	 <big>令字体加大。 </big> <br/>
+	 <small>令字体变细。 </small>  <br/>
+	 二的三次方：2<sup>3</sup>=8<br/>
+	 水的化学方程式：H<sub>2</sub>O<br/>
+  </body>
+  
+  
+  <!-- 标题标签
+  	<h1></h1>
+  	<h2></h2>
+  	<h3></h3>
+  	<h4></h4>
+  	<h5></h5>
+  	<h6></h6>
+ 	 这些是标题标记，由 <H1> 至 <H6> 变粗变大加宽的程度逐渐减小。每个标题标记所标示 的字句将独占一行且上下留一空白行。 
+   -->
+	<H1>Header Level 1</H1> 
+	<H2>Header Level 2</H2> 
+	<H3>Header Level 3</H3> 
+	<H4>Header Level 4</H4> 
+	<H5>Header Level 5</H5> 
+	<H6>Header Level 6</H6> 
+	  
+	<!-- 
+	<font></font>
+		face="Arial" 
+		设定文字的字形。Arial 是常用的一种，请不要使用 Window 内建字 形以外的字形。于没有设定为 Gb2312 Encoding 的中文网页，Netscape Netvigator 不会显示此标记 所指明的任何中文字形。 
+		size="+2" 
+		设定文字的大小。其值可以是绝对或相对， 
+		绝对的意思便是标记自己决定文字的大小，不受 <BASEFONT> 的影响，如 
+		size="5" 表示其大小便是 5， 而html内定值为 3，即 size="3"和没有设定是一样的。 
+		相对的意思便是在内定值 3 的基础上增加或减少大小级数，如 size="+2" 便等同绝 对表示法的 size="5"，但若已设定 <BASEFONT size="n"> 则其实际大小便是 n+2 不 再是 3+2 了。<BASEFONT>只有绝对表示法。 
+		color="#008000" 
+		设定文字的颜色。#008000 表示绿色	
+	 -->
+	  <font face="Arial" size="+2" color="#008000">Creation of Webpage</font>
+</html>

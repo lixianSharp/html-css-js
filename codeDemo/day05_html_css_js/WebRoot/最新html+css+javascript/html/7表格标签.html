@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>表格标签</title>
+</head>
+<!--
+一个浏览器只要遇到一个网站的tbody标签，那么就可以显示当前页面的信息。
+之前的很多网页都是用表格布局的。
+以前的浏览器一旦遇到了一个<table>的开始标签，就必须要等到遇到table标签的结束标签的时候，才会在网页中显示一个标签的内容。
+后来一个表格就被分成三部分：
+		<thead>表头 可以没有存在<thead>
+		<tbody>表体 一个表格至少要存在一个<tbody>，也可以存在多个<tbody>
+		<tfoot>表尾巴  可以不存在<tfoot>
+		
+
+<table>表格标签：
+	表格标签使用到的标签：
+		<table>表格
+		<tr>一行
+		<td>单元格
+		<th>表头(表格的表头,默认的样子是居中加粗)
+		<caption>表格的标题
+		
+	
+	表格标签使用的格式：
+		<table>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+	
+	表格常用的属性：
+		border:设置表格边框
+		width:设置表格的宽度
+		height：设置表格的高度
+		colspan：设置单元格占据指定的列数
+		rowspan:设置单元格占据指定的行数
+
+-->
+
+<body>
+<table align="center" border="1px" bordercolor="green" width="400px" height="300px">
+<caption>编程语言统计表</caption>
+<thead><!--表头-->
+	<tr>
+		<th>姓名</th>
+		<th>编程语言</th>
+		<th>代码量</th>
+	</tr>
+</thead>
+
+<tbody><!--表体-->
+	<tr>
+		<td rowspan="0">侯志民</td>
+		<td>java、C++</td>
+		<td>两年码农</td>
+	</tr>
+	<tr>
+		<td>王沛</td>
+		<td>java、C++</td>
+		<td>两年码农</td>
+	</tr>
+	<tr>
+		<td>程序员</td>
+		<td>C、C++、C#、XML、HTML、CSS、JavaScript、JSP</td>
+		<td>1GB代码量</td>
+	</tr>
+</tbody>
+<tfoot>
+	<tr>
+		<td rowspan="2">奖励</td>
+		<td>继续编程，直到代码量达到10GB,之后就达到另一个新高度了！</td>
+		<td>10GB</td>
+	</tr>
+	<tr>
+		<td>coding！coding！coding！</td>
+		<td>10GB</td>
+	</tr>
+</tfoot>
+<tfoot>
+	<tr align="center">
+		<td colspan="2">综合测评</td>
+		<td>合格</td>
+	</tr>
+</tfoot>
+
+</table>
+
+
+
+</body>
+</html>

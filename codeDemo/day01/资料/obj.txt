@@ -1,0 +1,3 @@
+f_introspector.Person
+id=110
+name=¹·ÍÞ

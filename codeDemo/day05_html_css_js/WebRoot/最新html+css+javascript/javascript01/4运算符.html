@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*
+	运算符：
+		+  (加法、正数、连接符)
+		true  是1， false 是0
+*/
+	var a=1;
+	document.write(a+true+"<br/>");//结果为2
+	document.write(a+false+"<br/>");//结果是1
+	
+
+/*
+	除法：
+		如果两个整数相除的时候不能整除的时候，结果还是小数。
+*/	
+	var b=10;
+	var c=3;
+	document.write((b/c)+"<br/>");//3.3333333333333335
+	
+/*
+	比较运算符：
+		字符串的比较规则是：
+			情况1：
+				能找到对应位置上的不同字符，那么就比较第一个不同字符的大小。
+				
+			情况2：
+				不能找到对应位置上的不同字符，这时候比较的是两个字符串的长度。
+*/
+	document.write("10大于3吗？"+(10>3)+"<br/>");//true
+	document.write("字符串10大于字符串3吗?"+("10">"3")+"<br/>");//false
+	document.write("19字符串大于1字符串吗？"+("19">"1")+"<br/>");//true
+	document.write("190字符串大于19字符串吗？"+("190">"1900")+"<br/>");//false 字符串与字符串比较 这时比较的是字符串的长度
+	document.write("10大于字符串9吗？"+(10>"9")+"<br/>");//true 
+	/*
+		凡是数字与字符串进行比较，会先把字符串转换成数字再进行比较。
+	*/ 
+	
+	
+/*
+	逻辑运算符：
+	没有单一的。
+*/	
+	document.write(true&&true+"<br/>");//true
+	document.write(false&&false+"<br/>");//false
+	document.write(true&&false+"<br/>");//false
+	document.write(false&&true+"<br/>");//false
+	
+	document.write(true||true+"<br/>");//true
+	document.write(false||false+"<br/>");//false
+	document.write(true||false+"<br/>");//true
+	document.write(false||true+"<br/>");//true
+
+
+/*
+	三目运算符：
+		布尔表达式? 值1:值2;
+*/
+	var age=19;
+	document.write(age>18?"成年人":"未成年人");//成年人
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>运算符</title>
+</head>
+
+<body>
+</body>
+</html>

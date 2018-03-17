@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>常用标签.html</title>
+   <meta name="content-type" content="text/html; charset=UTF-8">
+   
+   <!-- 
+	<link> 用来将目前文件与其它 URL 作连结，但不会有连结按钮，用於 <HEAD> 标记间， 格式如下： 
+		<link href="URL" rel="relationship"> 
+		<link href="URL" rev="relationship">    
+	   
+	-->
+	<link href="https://www.baidu.com" rel="relationship">用来将目前文件与其它 URL 作连结</link> 
+
+	<!-- <mate>标签 -->
+	<!-- 
+		<META> 是放於 <HEAD> 与 </HEAD>之间的标记，功用与变化等对，所以我公式化地介 绍。 
+		<meta name="Description" content="This is Chris's Home Page"> 
+		该网页的描述，作用於寻找引擎的登录 
+		
+		<meta name="Keywords" content="Chris, Web, Music, photo"> 
+		该网页的关键字，作用於寻找引擎的登录 
+		
+		<meta http-equiv="Expires" content="Tue, 09 Dec 1997 00:00:00 GMT"> 
+		<meta http-equiv="Pragma" content="no-cache"> 
+		以上行功能相同，都是要浏览器重新载入该页，不要使用快取档案，当然可以修 改该 Expire 时间。 
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=big5"> 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+		设定这是 HTML 文件及其编码语系，中文网页请使用 big5 那行，或者不设编码亦 可，纯英文网页建议使用 iso-8859-1。 
+		
+		<meta name="GENERATOR" content="Mozilla/4.04 [en] (Win95; I) [Netscape]"> 
+		<meta name="GENERATOR" content="Microsoft FrontPage 3.0"> 
+		这只表示该网页由甚堋编辑器写成。 
+		
+		<meta http-equiv="refresh" content="10; url=http://www.hkiwc.com"> 
+		这一行较为实用，能於预定秒数内自动转到指定的网址。原始码中 10 表示 10秒。 
+	
+	 -->
+
+  </head>
+  
+  
+  <body>
+  	<!-- 走动标签
+  		<marquee></marquee>
+  		该标签的属性：
+			behavior="SCROLL" 
+			决定文字的卷动方式，可选值为： 
+				SCROLL 一般卷动，是内定值。 
+				SLIDE 如幻灯片，一格格的，效果是文字一接触左边便全部消失。 
+				ALTERNATE 文字向左右两边撞来撞去。 
+			
+			direction="left" 
+				设定文字的卷动方向，left 表示向左，是内定值，right 表示向右。 
+			
+			bgcolor="#0000FF" 
+			设定文字卷动范围的背景颜色。 
+			
+			height="30" width="150" 
+			>设定文字卷动范围，可采用相对或绝对，如 30% 或 30 等，单位为像素。 
+			
+			hspace="0" vspace="0" 
+				设定文字的水平及垂直空白位置。 
+			
+			loop="INFINITE" 
+				设定文字卷动次数，其值可以是正整数或 INFINITE，INFINITE 是内定值，表示无 限次。 
+			
+			scrollamount="30" 
+				每「格」文字之间的间隔，单位是像素。 
+			
+			scrolldelay="500" 
+				文字卷动的停顿时间，单位是毫秒。 
+  			
+  	 -->
+  	<marquee behavior="alternate">撞来撞去，啊！我昏啦</marquee> 
+  	
+  	<!-- 
+  		<BLINK> 是令文字闪烁，只适用于 NC，用法直接，没有参数
+  	 -->
+  	<blink>我是天上星，闪又闪</blink> 
+  	
+  	
+  	
+  </body>
+</html>
